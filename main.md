@@ -32,11 +32,11 @@ style: |
 ## GHC ってなに
 
 - Glasgow Haskell Compiler
-- プログラミング言語Haskellのコンパイラの一つ
+- プログラミング言語 Haskell のコンパイラの一つ
   - 今はほぼこれ以外のコンパイラが使われていない
-- このスライドに登場するHaskellのコードは
-  GHC専用の言語拡張がふんだんに使われている
-  - ので、今日の話はGHC特有の話でHaskellには適用されないことが多い
+- このスライドに登場する Haskell のコードは
+  GHC 専用の言語拡張がふんだんに使われている
+  - ので、今日の話は GHC 特有の話で Haskell には適用されないことが多い
 
 ---
 
@@ -121,7 +121,7 @@ fn ex_falso<P>(x: Void) -> P {
 - ところで、値について論じれるなら二つの値が等しいかどうかを証明したくなる
 - 「値が存在すること」と「二つの型（値）が等しい」をむずびつけるには...
 - 「二つの型が等しいとき、かつその時に限り存在する値」があればいい
-  * **Propositional Equality**, その型をIdentity Type
+  * **Propositional Equality**, その型を Identity Type
 
 ---
 
@@ -143,7 +143,7 @@ trans Refl Refl = Refl  -- GHC can infer transitivity
 - **GADTs** (*Generalized Algebraic Datatypes*) という言語機能を活用
 - `a :~: b` 型の値を `Refl` コンストラクタを用いて作る
 - ただし、`Refl` コンストラクタは型同値性 `a ~ b` を要求
-  - `a` と `b` が等しいとGHCが判断したら、 `a ~ b` を解消する
+  - `a` と `b` が等しいと GHC が判断したら、 `a ~ b` を解消する
   - 単一化による解消だけではなく、**型族** (*Type Family*) で等しさを定義できる
 
 ---
@@ -209,7 +209,7 @@ plusZ (S n') = cong (plusZ n')  -- n = S n' の場合、S n' = plus (S n') Z を
 - `cong : a = b -> f a = f b`
   - `plusZ n' : n' = plus n' Z`
   - `cong (plusZ n') : S n' = S (plus n' Z)`
-- 型レベルの項 `n` について項レベルでcase analysisできているのがポイント
+- 型レベルの項 `n` について項レベルで case analysis できているのがポイント
 
 ---
 
@@ -222,9 +222,9 @@ plusZ (S n') = cong (plusZ n')  -- n = S n' の場合、S n' = plus (S n') Z を
     data Z
     data S n
     ```
-- case analysisのために↑で作った型レベルの項を値に対応させる
+- case analysis のために↑で作った型レベルの項を値に対応させる
   - 各ケースに対応した値を用意
-  - これはさっきもでてきたGADTsで可能に...
+  - これはさっきもでてきた GADTs で可能に...
 
 ---
 
@@ -274,7 +274,7 @@ plus_Sn_m _ _ = Refl
 - 下の例では型レベルの `a` と値レベルの `a'` はまるで別物
 - でも構造が反映されているので
   - 型レベルの `n` で命題を書き
-  - 値レベルの `SNat n` でcase analysisで証明を書くことができる
+  - 値レベルの `SNat n` で case analysis で証明を書くことができる
 
 ```haskell
 plus_Z_right :: SNat a -> a + Z :~: a
@@ -423,10 +423,10 @@ mult_assoc (SS a') b c = trans
   - 命題論理: 直積型、直和型、関数型など
   - 一階述語論理: 依存直積型、依存直和型
   - （二階述語論理: 多相型）
-- Propositional Equalityを実現することができれば、等しさの証明ができそう
+- Propositional Equality を実現することができれば、等しさの証明ができそう
   - GADTs (type equality constraint in GHC)
   - Leibnizian Equality
-- 依存型がなくても、GADTsでsingletonを実現すればほぼ同等のことができそう
+- 依存型がなくても、GADTs で singleton を実現すればほぼ同等のことができそう
   - 依存型があれば項レベルの式に対する証明が書けるがこの方法ではできない
   - 型レベルの式に対する証明はできる！
 

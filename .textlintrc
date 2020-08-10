@@ -1,7 +1,9 @@
 filters:
   comments: true
 rules:
-  preset-ja-spacing: true
+  preset-ja-spacing:
+    ja-space-between-half-and-full-width:
+      space: always
   '@textlint-ja/no-insert-dropping-sa': true
   '@textlint-ja/no-synonyms': true
   '@textlint-rule/no-invalid-control-character': true
