@@ -1,7 +1,7 @@
 {
-  "name": "slide-coins20lt-proving-in-ghc",
+  "name": "slide-coins20lt-prove-using-ghc",
   "version": "1.0.0",
-  "description": "Theorem Proving in GHC",
+  "description": "Theorem Proving using GHC",
   "main": "index.js",
   "scripts": {
     "lint": "textlint main.md",
