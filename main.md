@@ -7,7 +7,7 @@ style: |
   section {
     font-family: "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
   }
-  section > footer > a {
+  section > footer, section > footer a {
     font-family: "Noto Mono", monospace;
     color: #636e72;
   }
@@ -395,7 +395,7 @@ mult_assoc (SS a') b c = trans
 
 ---
 
-<!-- _footer: Copyright 2020 Twitter, Inc and other contributors. [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) -->
+<!-- _footer: "Copyright 2020 Twitter, Inc and other contributors.\n [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)" -->
 
 ## オエー
 
