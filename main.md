@@ -11,12 +11,10 @@ style: |
     font-family: "Noto Mono", monospace;
     color: #636e72;
   }
-  section.no-footer > footer {
-    display: none;
-  }
 ---
 
-<!-- _class: no-footer -->
+<!-- _paginate: false -->
+<!-- _footer: "" -->
 ![bg](./asset/title.png)
 
 ---
@@ -127,7 +125,7 @@ fn ex_falso<P>(x: Void) -> P {
 
 ---
 
-<!-- _class: no-footer -->
+<!-- _footer: '' -->
 ## Propositional equality, using type equality constraint
 
 ```haskell
@@ -308,7 +306,7 @@ plus_assoc (SS a') b c = trans
 
 ---
 
-<!-- _class: no-footer -->
+<!-- _footer: '' -->
 - 掛け算の結合律の証明
 
 ```haskell
@@ -434,5 +432,6 @@ mult_assoc (SS a') b c = trans
 
 ---
 
-<!-- _class: no-footer -->
+<!-- _paginate: false -->
+<!-- _footer: presented by coord_e <<me@coord-e.com>> -->
 ![bg](./asset/thanks.png)
