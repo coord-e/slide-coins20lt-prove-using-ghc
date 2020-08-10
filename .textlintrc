@@ -1,0 +1,17 @@
+filters:
+  comments: true
+rules:
+  preset-ja-spacing: true
+  '@textlint-ja/no-insert-dropping-sa': true
+  '@textlint-ja/no-synonyms': true
+  '@textlint-rule/no-invalid-control-character': true
+  '@textlint-rule/no-unmatched-pair': true
+  ja-hiragana-fukushi: true
+  ja-hiragana-hojodoushi: true
+  ja-hiragana-keishikimeishi: true
+  ja-unnatural-alphabet: true
+  no-dead-link: true
+  no-nfd: true
+  no-todo: true
+  prefer-tari-tari: true
+  terminology: true
