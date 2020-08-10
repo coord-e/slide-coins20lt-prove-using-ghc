@@ -1,2 +1,5 @@
 *.pdf
 *.html
+dist/
+
+node_modules/

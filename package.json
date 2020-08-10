@@ -1,0 +1,25 @@
+{
+  "name": "slide-coins20lt-proving-in-ghc",
+  "version": "1.0.0",
+  "description": "Theorem Proving in GHC",
+  "main": "index.js",
+  "scripts": {
+    "build:html": "marp main.md -o dist/index.html && cpy asset dist/asset",
+    "build:pdf": "marp main.md -o dist/slide.pdf --allow-local-files",
+    "build": "npm run build:html && npm run build:pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coord-e/slide-coins20lt-proving-in-ghc.git"
+  },
+  "author": "coord_e",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coord-e/slide-coins20lt-proving-in-ghc/issues"
+  },
+  "homepage": "https://github.com/coord-e/slide-coins20lt-proving-in-ghc#readme",
+  "dependencies": {
+    "@marp-team/marp-cli": "^0.17.4",
+    "cpy-cli": "^3.1.1"
+  }
+}
