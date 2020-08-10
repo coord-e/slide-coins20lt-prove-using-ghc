@@ -14,8 +14,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Install CJK fonts
-        run: sudo apt-get install fonts-noto-cjk
+      - name: Install Noto fonts
+        run: sudo apt-get install fonts-noto-cjk fonts-noto-mono
       - run: npm install
       - run: npm run build
       - uses: peaceiris/actions-gh-pages@v3
